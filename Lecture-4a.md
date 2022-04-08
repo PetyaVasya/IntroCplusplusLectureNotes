@@ -33,8 +33,8 @@ int side;
 int main() {
     Side side = Side::Buy;
     print(side);
-		std::cout << ::side << "\n";  
-		/*тут мы обратились к глобальой перемене side
+    std::cout << ::side << "\n";  
+    /*тут мы обратились к глобальой перемене side
      * это выражение называется полностью квалифицированным 
      * иденфицирующим выражением, (путь от корня)
      * */	
@@ -47,7 +47,7 @@ int main() {
 
 ```cpp
 int main() {
-		return Side::Sell;
+    return Side::Sell;
 }
 ```
 
@@ -55,7 +55,7 @@ int main() {
 
 ```cpp
 int main() {
-		return static_cast<int>(Side::Sell);
+    return static_cast<int>(Side::Sell);
 }
 ```
 
@@ -103,7 +103,7 @@ enum Side { Buy, Sell };
 
 ```cpp
 int main() {
-		return Side::Sell; // работает неявное приведение
+    return Side::Sell; // работает неявное приведение
 }
 ```
 
@@ -111,7 +111,7 @@ int main() {
 
 ```cpp
 int main() {
-		return Sell;
+    return Sell;
 }
 ```
 
@@ -172,7 +172,7 @@ int main() {
 
 ```cpp
 int main() {
-		Rational a;
+    Rational a;
     std::cout << a.numerator << "/" << a.denominator << "\n";
 }
 ```
@@ -183,7 +183,7 @@ int main() {
 
 ```cpp
 int main() {
-		Rational a{1, 2};
+    Rational a{1, 2};
     std::cout << a.numerator << "/" << a.denominator << "\n";
 }
 ```
@@ -475,9 +475,9 @@ int main() {
 ```cpp
 auto [r, ok] = read_rational(std::cin);
 if (ok) {
-		r.print(std::cout);
+    r.print(std::cout);
 } else {
-		std::cout << "Wrong value" << "\n";
+    std::cout << "Wrong value" << "\n";
 }
 ```
 
@@ -509,7 +509,7 @@ auto r2 = r.read(std::cin);
 
 ```cpp
 void print(std::ostream & strm) {
-		strm << this->numerator << "/" << this->denominator << "\n";
+    strm << this->numerator << "/" << this->denominator << "\n";
 }
 ```
 
