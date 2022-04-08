@@ -12,7 +12,7 @@ Rational(const int a, const int b)
 
 ```cpp
 Rational(const double x)
-        : numerator(x)
+    : numerator(x)
 ```
 
 На самом деле, 3й конструктор (конструтор при одном аргументе), можно было и не писать, могли бы отделаться, написав
@@ -26,8 +26,8 @@ Rational(const int a, const int b = 1)
 ```cpp
 auto r1 = Rational::read(std::cin);
 if (r1) {
-	r1->add({11})
-	/* ... */
+    r1->add({11})
+    /* ... */
 ```
 
 Но теперь, вся процедура неявоного приведения типов - усложняется. Теперь она фактически делится на 3 этапа…
@@ -70,7 +70,7 @@ r1->add(x);
 
 ```cpp
 explicit Rational(const double x)
-        : numerator(x)
+    : numerator(x)
 ```
 
 теперь у нас компилируется 
@@ -103,7 +103,7 @@ r1->add(Rational{0.1});
 
 ```cpp
 double to_double() const {
-		return static_cast<double>(numerator) / denominator;
+    return static_cast<double>(numerator) / denominator;
 }
 ```
 
@@ -115,7 +115,7 @@ double to_double() const {
 
 ```cpp
 operator double () const {
-		return to_double();
+    return to_double();
 }
 ```
 
@@ -135,7 +135,7 @@ auto tmp = *this;
 
 ```cpp
 A(const A & other)
-		: n(other.n)
+    : n(other.n)
 {
 
 }
@@ -155,8 +155,8 @@ a1 = a2;
 ```cpp
 void operator = (const Rational & other)
 {
-		numerator = other.numerator;
-		denominator = other.denominator;
+    numerator = other.numerator;
+    denominator = other.denominator;
 } 
 ```
 
@@ -186,9 +186,9 @@ a = (b = (c = d));
 ```cpp
 Rational & operator = (const Rational & other)
 {
-		numerator = other.numerator;
-		denominator = other.denominator;
-		return *this;
+    numerator = other.numerator;
+    denominator = other.denominator;
+    return *this;
 }
 ```
 
@@ -228,7 +228,7 @@ A(A & other)
 ```cpp
 A & operator = (A && other) 
 {
-		return *this;
+    return *this;
 }
 ```
 
@@ -254,7 +254,7 @@ Rational & operator = (const Rational &) = delete;
 ```cpp
 auto operator == (const Rational & x) const
 {
-			return numerator == x.numerator && denominator == x.denominator;
+    return numerator == x.numerator && denominator == x.denominator;
 }
 ```
 
@@ -265,7 +265,7 @@ auto operator == (const Rational & x) const
 ```cpp
 auto operator <=> (const Rational & x) const
 {
-			return numerator <=> x.numerator;
+    return numerator <=> x.numerator;
 }
 ```
 
