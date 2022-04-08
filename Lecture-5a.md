@@ -24,8 +24,8 @@ Rational & operator + (const int lhs, const Rational & rhs)
 
 ```cpp
 Rational & operator ++ () {
-		numerator += denominator;
-		return *this;
+    numerator += denominator;
+    return *this;
 }
 ```
 
@@ -33,9 +33,9 @@ Rational & operator ++ () {
 
 ```cpp
 Rational operator ++ (int) {
-		auto tmp = *this;
-		numerator += denominator;
-		return tmp;
+    auto tmp = *this;
+    numerator += denominator;
+    return tmp;
 }
 ```
 
@@ -45,9 +45,9 @@ Rational operator ++ (int) {
 
 ```cpp
 Rational & operator ++ (int) {
-		auto tmp = *this;
-		numerator += denominator;
-		return tmp;
+    auto tmp = *this;
+    numerator += denominator;
+    return tmp;
 }
 ```
 
@@ -83,7 +83,7 @@ public:
 
 ```cpp
 int get_numerator() const {
-		return numerator;
+    return numerator;
 }
 ```
 
@@ -146,8 +146,8 @@ a++;
 
 ```cpp
 int & get_n(const int x) {
-		int y = x;
-		return y;
+    int y = x;
+    return y;
 }
 ```
 
@@ -157,7 +157,7 @@ int & get_n(const int x) {
 
 ```cpp
 const int & get_n(const int & x) {
-		return x;
+    return x;
 }
 ```
 
@@ -295,7 +295,7 @@ Rational operator + (const int lhs, const Rational & rhs) {
 
 ```cpp
 Rational & get_r(int a, int b) {
-		return {a, b};
+    return {a, b};
 }
 ```
 
@@ -317,8 +317,8 @@ int main() {
 
 ```cpp
 int main() {
-		int a;
-		X x(a);
+    int a;
+    X x(a);
 }
 ```
 
@@ -337,14 +337,14 @@ public:
             , denominator(b) { // и без нее
         
     }
-		/* ... */
+    /* ... */
 }
 ```
 
 ```cpp
 Rational(const int a, const int b) {
-		numerator = a;
-		denominator = b;
+    numerator = a;
+    denominator = b;
 }
 ```
 
@@ -359,8 +359,8 @@ private:
     int denominator;
 public:
     Rational(int a, int b) {
-				numerator = a;
-				denominator = b;
+        numerator = a;
+        denominator = b;
     }
 ```
 
@@ -477,7 +477,7 @@ B b(1, 05)
 
 ```cpp
 struct B : A {
-		B(int , double b) : A(a, b) {
+        B(int , double b) : A(a, b) {
     }
 };
 ```
@@ -486,6 +486,6 @@ struct B : A {
 
 ```cpp
 struct B : A {
-		using A::A;    
+    using A::A;    
 };
 ```
