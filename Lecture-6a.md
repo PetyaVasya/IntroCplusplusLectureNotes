@@ -3,7 +3,7 @@
 ```cpp
 struct Node {
     Node left, right;
-		/* ... */
+    /* ... */
 };
 ```
 
@@ -233,7 +233,7 @@ struct Node {
 
 ```cpp
 void f(int * a) {
-		std::cout << *a;
+    std::cout << *a;
 }
 ```
 
@@ -243,7 +243,7 @@ void f(int * a) {
 
 ```cpp
 void f(int & a) {
-		std::cout << a;
+    std::cout << a;
 }
 ```
 
@@ -310,8 +310,8 @@ int const * const * const * const a;
 
 ```cpp
 int main() {
-		int a[10];
-		std::cout << std::boolalpha << (&a[3] < &a[8]) << "\n" << (&a[5] < &a[3]);
+    int a[10];
+    std::cout << std::boolalpha << (&a[3] < &a[8]) << "\n" << (&a[5] < &a[3]);
 } 
 ```
 
@@ -414,7 +414,7 @@ int main() {
     int a[] = {1,2, 3};
     int * begin = a;
     int * end = begin + 3;
-		while (begin != end) {
+    while (begin != end) {
         std::cout << *begin << " ";
         ++begin;
     }
