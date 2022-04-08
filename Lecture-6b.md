@@ -259,11 +259,11 @@ Vector(const Vector & other)
 
 ```cpp
 Vector & operator = (const Vector & other)
-    {
-        auto tmp = other;
-        swap(tmp);
-        return *this;
-    }
+{
+    auto tmp = other;
+    swap(tmp);
+    return *this;
+}
 ```
 
 Можно и переписать `pop_back` . Мы сейчас память перевыделяем, когда можно было просто уменьшить логический размер вектора.
