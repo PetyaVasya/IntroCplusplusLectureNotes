@@ -108,7 +108,7 @@ static std::optional<std::string, Rational> read(std::istream & strm);
 
 ```cpp
 bool compare(const Rational & x) {
-		return numerator == x.numerator && denominator == x.denominator;
+    return numerator == x.numerator && denominator == x.denominator;
 }
 ```
 
@@ -138,7 +138,7 @@ const auto r1 = Rational::read(std::cin);
 
 ```cpp
 bool compare(const Rational & x) const {
-		return numerator == x.numerator && denominator == x.denominator;
+    return numerator == x.numerator && denominator == x.denominator;
 }
 ```
 
@@ -148,7 +148,7 @@ bool compare(const Rational & x) const {
 
 ```cpp
 bool operator ==(const Rational & x) const {
-		return numerator == x.numerator && denominator == x.denominator;
+    return numerator == x.numerator && denominator == x.denominator;
 }
 ```
 
@@ -156,9 +156,9 @@ bool operator ==(const Rational & x) const {
 
 ```cpp
 if (r2) {
-		std::cout << std::boolalpha << (*r1 == *r2) << "\n";
+    std::cout << std::boolalpha << (*r1 == *r2) << "\n";
 } else {
-		std::cout << "wrong value" << "\n";
+    std::cout << "wrong value" << "\n";
 }
 ```
 
@@ -166,7 +166,7 @@ if (r2) {
 
 ```cpp
 void operator /= (int x) {
-		denominator *= x;
+    denominator *= x;
 }
 ```
 
@@ -186,8 +186,8 @@ int b = (a /= 5)++;
 
 ```cpp
 Rational operator /= (int x) {
-		denominator *= x;
-		return * this;
+    denominator *= x;
+    return * this;
 }
 ```
 
@@ -195,8 +195,8 @@ Rational operator /= (int x) {
 
 ```cpp
 Rational & operator ++ () {
-		numerator += denominator;
-		return * this;
+    numerator += denominator;
+    return * this;
 }
 ```
 
@@ -208,9 +208,9 @@ Rational & operator ++ () {
 
 ```cpp
 Rational operator ++ (int) {
-		auto tmp = * this
-		numerator += denominator;
-		return tmp;
+    auto tmp = * this
+    numerator += denominator;
+    return tmp;
 }
 ```
 
@@ -218,7 +218,7 @@ Rational operator ++ (int) {
 
 ```cpp
 std::ostream & print(std::ostream & strm) const {
-		return strm << numerator << "/" << denominator << "\n";
+    return strm << numerator << "/" << denominator << "\n";
 }
 ```
 
@@ -232,9 +232,9 @@ std::ostream & operator << (std::ostream & strm, Rational x) {
 
 ```cpp
 Rational operator + (const Rational & x) const {
-		auto tmp = *this;
-		tmp.add(x);
-		return tmp;
+    auto tmp = *this;
+    tmp.add(x);
+    return tmp;
 }
 ```
 
@@ -242,9 +242,9 @@ Rational operator + (const Rational & x) const {
 
 ```cpp
 Rational operator + (const int & x) const {
-		auto tmp = *this;
-		tmp.add(x);
-		return tmp;
+    auto tmp = *this;
+    tmp.add(x);
+    return tmp;
 }
 ```
 
@@ -332,7 +332,7 @@ public:
 
 ```cpp
 class Rational {
-		/* ... */
+    /* ... */
 }
 ```
 
@@ -346,7 +346,7 @@ class Rational {
 
 ```cpp
 struct X : Rational  {
-		/* ... */  
+    /* ... */  
 };
 ```
 
@@ -356,6 +356,6 @@ struct X : Rational  {
 
 ```cpp
 class X : public Rational {
-		/* ... */
+    /* ... */
 }
 ```
