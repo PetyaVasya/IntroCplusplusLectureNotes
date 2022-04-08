@@ -8,7 +8,7 @@
 
 ```cpp
 int main() {
-		print(static_cast<Side>(1000));
+    print(static_cast<Side>(1000));
 }
 ```
 
