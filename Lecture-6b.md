@@ -47,7 +47,7 @@ std::cout << u << "\n";
 int a[] = {4, 5, 6, 3, 5}
 std::qsort(a, sizeof(a) / sizeof(a[0]), sizeof(a[0]), cmp);
 for (const auto x : a) {
-		std::cout << x << " ";
+    std::cout << x << " ";
 }
 ```
 
@@ -217,7 +217,7 @@ std::ostream  & print(std::ostream & strm) const {
 ```cpp
 friend std::ostream & operator << (std::ostream & strm, const Vector & v)
 {
-		return v.print(strm);
+    return v.print(strm);
 }
 ```
 
@@ -275,9 +275,9 @@ Vector & operator = (const Vector & other)
 ```cpp
 Vector f()
 {
-		Vector v;
-		/* ... */
-		return v;
+    Vector v;
+    /* ... */
+    return v;
 }
 ```
 
@@ -286,7 +286,7 @@ Vector f()
 ```cpp
 Vector f(Vector & v)
 {
-		/* v = ... */
+    /* v = ... */
 }
 ```
 
@@ -304,8 +304,8 @@ f(v)
 ```cpp
 void g(Vector & v)
 {
-		Vector vv;
-		v.swap(v);
+    Vector vv;
+    v.swap(v);
 }
 ```
 
@@ -323,8 +323,8 @@ std::cout << vv;
 ```cpp
 void g(Vector && v) 
 {
-		Vector vv;
-		v.swap(v);
+    Vector vv;
+    v.swap(v);
 }
 ```
 
@@ -359,7 +359,7 @@ Vector(Vector && other)
 ```cpp
 Vector & operator = (Vector && other)
 {
-		swap(other);
-		return *this;
+    swap(other);
+    return *this;
 }
 ```
